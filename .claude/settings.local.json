@@ -3,7 +3,9 @@
     "allow": [
       "Bash(npx create-expo-app:*)",
       "Bash(npx create-expo-app@latest estimate-assistant --template blank-typescript)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
