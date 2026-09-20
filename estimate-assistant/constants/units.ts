@@ -29,8 +29,11 @@ export const UNIT_LABELS: Record<LengthUnit, string> = {
 export const ROLL_WIDTH_UNITS: LengthUnit[] = ['inches', 'feet', 'yards', 'meters'];
 export const WALL_DIMENSION_UNITS: LengthUnit[] = ['feet', 'inches', 'meters', 'yards'];
 export const OUTPUT_UNITS: LengthUnit[] = ['yards', 'feet', 'meters'];
+export const SHOWER_DIMENSION_UNITS: LengthUnit[] = ['inches', 'feet'];
 
 // Default units
 export const DEFAULT_ROLL_WIDTH_UNIT: LengthUnit = 'inches';
 export const DEFAULT_WALL_DIMENSION_UNIT: LengthUnit = 'feet';
 export const DEFAULT_OUTPUT_UNIT: LengthUnit = 'yards';
+export const DEFAULT_SHOWER_DIMENSION_UNIT: LengthUnit = 'inches';
+

@@ -12,6 +12,9 @@ expo-env.d.ts
 # Firebase
 .firebase/
 
+# Vercel
+.vercel/
+
 # Native
 .kotlin/
 *.orig.*
@@ -42,3 +45,5 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+.vercel

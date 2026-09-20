@@ -6,6 +6,7 @@ import { CategoryCard } from '../components/CategoryCard';
 type RootStackParamList = {
   Home: undefined;
   WallCovering: undefined;
+  ShowerSurrounds: undefined;
   ComingSoon: { category: string };
 };
 
@@ -30,24 +31,16 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
           />
 
           <CategoryCard
-            title="Tiles"
-            icon="⬜"
+            title="Digitally printed WC - janice"
+            icon="🖼️"
             isComingSoon
-            onPress={() => navigation.navigate('ComingSoon', { category: 'Tiles' })}
+            onPress={() => navigation.navigate('ComingSoon', { category: 'Digitally printed WC - janice' })}
           />
 
           <CategoryCard
-            title="Carpet"
-            icon="🟫"
-            isComingSoon
-            onPress={() => navigation.navigate('ComingSoon', { category: 'Carpet' })}
-          />
-
-          <CategoryCard
-            title="MDF"
-            icon="🪵"
-            isComingSoon
-            onPress={() => navigation.navigate('ComingSoon', { category: 'MDF' })}
+            title="Shower Surrounds"
+            icon="🚿"
+            onPress={() => navigation.navigate('ShowerSurrounds')}
           />
         </View>
 

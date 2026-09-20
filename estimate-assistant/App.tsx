@@ -3,11 +3,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen } from './screens/HomeScreen';
 import { WallCoveringScreen } from './screens/WallCoveringScreen';
+import { ShowerSurroundsScreen } from './screens/ShowerSurroundsScreen';
 import { ComingSoonScreen } from './screens/ComingSoonScreen';
 
 export type RootStackParamList = {
   Home: undefined;
   WallCovering: undefined;
+  ShowerSurrounds: undefined;
   ComingSoon: { category: string };
 };
 
@@ -24,6 +26,7 @@ export default function App() {
       >
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="WallCovering" component={WallCoveringScreen} />
+        <Stack.Screen name="ShowerSurrounds" component={ShowerSurroundsScreen} />
         <Stack.Screen name="ComingSoon" component={ComingSoonScreen} />
       </Stack.Navigator>
     </NavigationContainer>

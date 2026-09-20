@@ -1,0 +1,10 @@
+{
+  "outputDirectory": "dist",
+  "buildCommand": "expo export -p web",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

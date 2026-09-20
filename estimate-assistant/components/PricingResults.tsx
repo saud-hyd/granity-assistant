@@ -203,7 +203,8 @@ const styles = StyleSheet.create({
   detailsGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 12,
+    marginRight: -12,
+    marginBottom: -12,
   },
   detailItem: {
     flex: 1,
@@ -211,6 +212,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#f8f9fa',
     padding: 12,
     borderRadius: 8,
+    marginRight: 12,
+    marginBottom: 12,
   },
   detailLabel: {
     fontSize: 12,

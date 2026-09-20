@@ -383,7 +383,6 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     flexDirection: 'row',
-    gap: 12,
     marginTop: 8,
   },
   calculateButton: {
@@ -392,6 +391,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 16,
     alignItems: 'center',
+    marginRight: 12,
   },
   calculateButtonText: {
     color: '#ffffff',
@@ -477,7 +477,6 @@ const styles = StyleSheet.create({
   },
   inputRow: {
     flexDirection: 'row',
-    gap: 8,
   },
   textInput: {
     backgroundColor: '#f8f9fa',
@@ -490,6 +489,7 @@ const styles = StyleSheet.create({
   },
   flexInput: {
     flex: 1,
+    marginRight: 8,
   },
   pickerContainer: {
     backgroundColor: '#f8f9fa',

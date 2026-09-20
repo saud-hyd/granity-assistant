@@ -129,7 +129,7 @@ export const VendorModal: React.FC<VendorModalProps> = ({ visible, onClose, onVe
   };
 
   return (
-    <Modal visible={visible} animationType="slide" transparent={false}>
+    <Modal visible={visible} animationType="slide">
       <View style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.headerTitle}>Vendor Pricing</Text>
@@ -326,10 +326,10 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
-    gap: 8,
   },
   flexInput: {
     flex: 1,
+    marginRight: 8,
   },
   pickerWrapper: {
     backgroundColor: '#f8f9fa',
@@ -344,7 +344,6 @@ const styles = StyleSheet.create({
   },
   formButtons: {
     flexDirection: 'row',
-    gap: 12,
     marginTop: 20,
   },
   cancelButton: {
@@ -355,6 +354,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 12,
     alignItems: 'center',
+    marginRight: 12,
   },
   cancelButtonText: {
     color: '#666',
@@ -412,13 +412,13 @@ const styles = StyleSheet.create({
   },
   vendorActions: {
     flexDirection: 'row',
-    gap: 8,
   },
   editButton: {
     backgroundColor: '#4A90E2',
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 6,
+    marginRight: 8,
   },
   editButtonText: {
     color: '#ffffff',
