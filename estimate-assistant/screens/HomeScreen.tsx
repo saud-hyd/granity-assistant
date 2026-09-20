@@ -7,6 +7,7 @@ type RootStackParamList = {
   Home: undefined;
   WallCovering: undefined;
   ShowerSurrounds: undefined;
+  DigitalWC: undefined;
   ComingSoon: { category: string };
 };
 
@@ -33,8 +34,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
           <CategoryCard
             title="Digitally printed WC - janice"
             icon="🖼️"
-            isComingSoon
-            onPress={() => navigation.navigate('ComingSoon', { category: 'Digitally printed WC - janice' })}
+            onPress={() => navigation.navigate('DigitalWC')}
           />
 
           <CategoryCard

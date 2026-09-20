@@ -162,5 +162,69 @@ const showerArea2 = calculateShowerSurroundsArea(showerTest2);
 console.log(`  Total Area in sq ft: ${showerArea2.totalAreaSqFt.toFixed(2)} (Expected: 88.00 sq ft)`);
 console.log();
 
+import {
+  calculateDigitalWC,
+  calculateDigitalWCPricing,
+  DigitalWCInputs,
+} from './utils/digitalWCCalc';
+
+console.log('=== Digitally Printed WC - Janice Tests ===\n');
+
+// Test 7: Digital WC test with width 120 inches (10 ft), height 96 inches (8 ft), bleed 6 inches
+console.log('Test 7: Digital WC test (120" W, 96" H, 6" bleed)');
+const digitalTest1: DigitalWCInputs = {
+  width: 120, // 10 ft
+  widthUnit: 'inches',
+  height: 96, // 8 ft
+  heightUnit: 'inches',
+  bleed: 6, // 6 inches
+  bleedUnit: 'inches',
+};
+
+const digitalResult1 = calculateDigitalWC(digitalTest1);
+console.log('Input:');
+console.log(`  Width: ${digitalTest1.width} ${digitalTest1.widthUnit}`);
+console.log(`  Height: ${digitalTest1.height} ${digitalTest1.heightUnit}`);
+console.log(`  Bleed: ${digitalTest1.bleed} ${digitalTest1.bleedUnit}`);
+console.log('Output:');
+console.log(`  a (meters): ${digitalResult1.aInMeters.toFixed(4)} m`);
+console.log(`  b (meters): ${digitalResult1.bInMeters.toFixed(4)} m`);
+console.log(`  Number of mural panels - 1.3m width each: ${digitalResult1.numberOfMuralPanels}`);
+console.log(`  Estimated width: ${digitalResult1.estimatedWidth.toFixed(2)} m (${digitalResult1.estimatedWidthInInches.toFixed(2)} in)`);
+console.log(`  Estimated height: ${digitalResult1.estimatedHeight.toFixed(2)} m (${digitalResult1.estimatedHeightInInches.toFixed(2)} in)`);
+
+const digitalPricing1 = calculateDigitalWCPricing(
+  5.0,
+  'sqft',
+  digitalResult1.estimatedWidth,
+  digitalResult1.estimatedHeight,
+  digitalResult1.estimatedWidthInInches,
+  digitalResult1.estimatedHeightInInches
+);
+console.log(`  Vendor price per sqft ($5 input): $${digitalPricing1.vendorPricePerSqFt.toFixed(2)}`);
+console.log(`  Vendor price per sqm: $${digitalPricing1.vendorPricePerSqm.toFixed(2)}`);
+console.log(`  Vendor price per Each: $${digitalPricing1.vendorPricePerEach.toFixed(2)}`);
+
+const digitalPricingMeters = calculateDigitalWCPricing(
+  50.0,
+  'sqm',
+  digitalResult1.estimatedWidth,
+  digitalResult1.estimatedHeight,
+  digitalResult1.estimatedWidthInInches,
+  digitalResult1.estimatedHeightInInches
+);
+console.log(`  Meter test ($50/sqm): Each = $${digitalPricingMeters.vendorPricePerEach.toFixed(2)} (${digitalResult1.estimatedWidth.toFixed(2)}m * ${digitalResult1.estimatedHeight.toFixed(2)}m * 50)`);
+
+const digitalPricingInches = calculateDigitalWCPricing(
+  0.03,
+  'inch',
+  digitalResult1.estimatedWidth,
+  digitalResult1.estimatedHeight,
+  digitalResult1.estimatedWidthInInches,
+  digitalResult1.estimatedHeightInInches
+);
+console.log(`  Inches test ($0.03/inch): Each = $${digitalPricingInches.vendorPricePerEach.toFixed(2)} (${digitalResult1.estimatedWidthInInches.toFixed(2)}in * ${digitalResult1.estimatedHeightInInches.toFixed(2)}in * 0.03)`);
+console.log();
+
 console.log('=== All tests completed successfully ===');
 
