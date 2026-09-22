@@ -27,25 +27,25 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
         <View style={styles.categoriesContainer}>
           <CategoryCard
             title="Wall Covering"
-            icon="🧱"
+            imageSource={require('../assets/wall-covering-beige-linen.png')}
             onPress={() => navigation.navigate('WallCovering')}
           />
 
           <CategoryCard
-            title="Digitally printed WC - janice"
-            icon="🖼️"
+            title="Digitally Printed WC - Janice"
+            imageSource={require('../assets/digital-wc-janice-mural.png')}
             onPress={() => navigation.navigate('DigitalWC')}
           />
 
           <CategoryCard
             title="Shower Surrounds"
-            icon="🚿"
+            imageSource={require('../assets/shower-surrounds.png')}
             onPress={() => navigation.navigate('ShowerSurrounds')}
           />
         </View>
 
         <View style={styles.footer}>
-          <Text style={styles.footerText}>© 2024 Estimate Assistant</Text>
+          <Text style={styles.footerText}>Copyright 2024 Estimate Assistant</Text>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -79,6 +79,9 @@ const styles = StyleSheet.create({
   },
   categoriesContainer: {
     padding: 20,
+    width: '100%',
+    maxWidth: 480,
+    alignSelf: 'center',
   },
   footer: {
     paddingVertical: 20,

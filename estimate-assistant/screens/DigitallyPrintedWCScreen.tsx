@@ -248,21 +248,21 @@ export const DigitallyPrintedWCScreen: React.FC<DigitallyPrintedWCScreenProps> =
                   <View style={[styles.column, styles.estimatedCard]}>
                     <Text style={styles.estimatedCardLabel}>Estimated width</Text>
                     <Text style={styles.estimatedCardValue}>
-                      {formatNumber(result.estimatedWidth, 2)} m
+                      {formatNumber(result.estimatedWidthInInches, 2)} in
                     </Text>
                     <Text style={styles.estimatedCardSubValue}>
-                      {formatNumber(result.estimatedWidthInInches, 2)} in
+                      {formatNumber(result.estimatedWidth, 2)} m
                     </Text>
                   </View>
 
-                  {/* Estimated Height */}
+                  {/* Estimated Depth */}
                   <View style={[styles.column, styles.estimatedCard]}>
-                    <Text style={styles.estimatedCardLabel}>Estimated height</Text>
+                    <Text style={styles.estimatedCardLabel}>Estimated depth</Text>
                     <Text style={styles.estimatedCardValue}>
-                      {formatNumber(result.estimatedHeight, 2)} m
+                      {formatNumber(result.estimatedHeightInInches, 2)} in
                     </Text>
                     <Text style={styles.estimatedCardSubValue}>
-                      {formatNumber(result.estimatedHeightInInches, 2)} in
+                      {formatNumber(result.estimatedHeight, 2)} m
                     </Text>
                   </View>
                 </View>
@@ -291,7 +291,6 @@ export const DigitallyPrintedWCScreen: React.FC<DigitallyPrintedWCScreenProps> =
                     >
                       <Picker.Item label="sqft" value="sqft" />
                       <Picker.Item label="sqm" value="sqm" />
-                      <Picker.Item label="inch" value="inch" />
                       <Picker.Item label="Each" value="Each" />
                     </Picker>
                   </View>
@@ -537,14 +536,14 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
   estimatedCardValue: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: '700',
     color: '#333',
   },
   estimatedCardSubValue: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#4A90E2',
+    fontSize: 12,
+    fontWeight: '500',
+    color: '#667085',
     marginTop: 4,
   },
   pricingInputContainer: {

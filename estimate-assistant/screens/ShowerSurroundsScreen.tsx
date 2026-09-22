@@ -217,7 +217,7 @@ export const ShowerSurroundsScreen: React.FC<ShowerSurroundsScreenProps> = ({ na
 
               {/* Below Area Output: 5 & 6 Pricing Inputs */}
               <View style={styles.pricingCard}>
-                <Text style={styles.pricingSectionTitle}>Pricing Settings</Text>
+                <Text style={styles.pricingSectionTitle}>Price</Text>
                 <Text style={styles.pricingSectionSubtitle}>Editable unit rates for package pricing</Text>
 
                 <View style={styles.inputContainer}>
